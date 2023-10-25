@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wingify</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <p class="cancel"><i class="fa-solid fa-xmark"></i></p>
+        <div class="data">
+            <form id="form" class="leftData">
+                <h3>GET $10 OFF WHEN YOU SIGN UP FOR</h3>
+                <p class="mainPara">SAVINGS,NEWS,UPDATES AND MORE</p>
+
+                <div class="inputs">
+                    <input class="inp" type="text" name="name" id="name" placeholder="your name" autocomplete="off">
+                    <input class="inp" type="text" name="email" id="email" placeholder="email address"
+                        autocomplete="off">
+                </div>
+
+                <div class="termsandconditions">
+                    <input class="checkInp" type="checkbox" name="checkbox" id="checkbox">
+                    <p class="checkPara">Check this box to receive monthly newsletter</p>
+                </div>
+
+                <button type="submit" id="buttonSubmit">SIGN UP</button>
+                <P class="privacy"><a href="#">PRIVACY POLICY</a></P>
+            </form>
+            <div class="rightData">
+                <!-- <p class="cancel"><i class="fa-solid fa-xmark"></i></p> -->
+                <img src="./img/image.png" alt="Wingify">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        let submitBtn = document.getElementById("buttonSubmit");
+        let myForm = document.getElementById("form");
+
+        myForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+        });
+
+        buttonSubmit.addEventListener("click", (e) => {
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+
+            localStorage.setItem("name", name);
+            localStorage.setItem("email", email);
+
+        });
+    </script>
+</body>
+
+</html>
